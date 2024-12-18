@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: explore
+  mvc:
+    servlet:
+      path: /api
+
+  # configure mysql connection as yml
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_explore
+    username: root
+    password: root
+  # auto update mysql
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  # swagger config
+springdoc:
+  swagger-ui:
+    persist-authorization: true
+    path: /swagger-ui
+
+hype360kh:
+  swagger:
+    info:
+      title: Explore API
+      version: 1.0
+      description: Explore API
+      termOfService: https://hype360kh.com
+      email: 2wEYH@example.com
+      url: https://hype360kh.com
+      name: Hype360
